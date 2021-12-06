@@ -1,0 +1,70 @@
+
+          <div>
+            <div className="row" style={{ paddingBottom: 40, paddingTop: 40 }}>
+              <div className="col text-align">
+                <div>
+                  <img
+                    alt=""
+                    src="https://res.cloudinary.com/wizzle3d/image/upload/v1638056756/se0whdvvxvut7mo0gswk.png"
+                    style={{ width: 200, height: 118 }}
+                  />
+                </div>
+                <Button title="Steam" onClick={() => setSelect(1)} />
+              </div>
+              <div className="col text-align">
+                <div>
+                  <img
+                    alt=""
+                    src="https://res.cloudinary.com/wizzle3d/image/upload/v1638108130/lb9hjreuwyaa1s7rzjck.png"
+                    style={{ width: 200, height: 118 }}
+                  />
+                </div>
+                <Button title="Google" onClick={() => setSelect(2)} />
+              </div>
+              <div className="col text-align">
+                <div>
+                  <img
+                    alt=""
+                    src="https://res.cloudinary.com/wizzle3d/image/upload/v1638108094/imyhg1kerimp87fohyvg.png"
+                    style={{ width: 200, height: 118 }}
+                  />
+                </div>
+                <Button title="Amazon" onClick={() => setSelect(3)} />
+              </div>
+            </div>
+            <legend className="border-bottom mb-4"></legend>
+            <div className="row" style={{ paddingBottom: 40, paddingTop: 40 }}>
+              <div className="col text-align">
+                <div>
+                  <img
+                    alt=""
+                    src="https://res.cloudinary.com/wizzle3d/image/upload/v1638056756/se0whdvvxvut7mo0gswk.png"
+                    style={{ width: 200, height: 118 }}
+                  />
+                </div>
+                <Button title="Steam" />
+              </div>
+              <div className="col text-align">
+                <div>
+                  <img
+                    alt=""
+                    src="https://res.cloudinary.com/wizzle3d/image/upload/v1638056756/se0whdvvxvut7mo0gswk.png"
+                    style={{ width: 200, height: 118 }}
+                  />
+                </div>
+                <Button title="Google" />
+              </div>
+              <div className="col text-align">
+                <div>
+                  <img
+                    alt=""
+                    src="https://res.cloudinary.com/wizzle3d/image/upload/v1638056756/se0whdvvxvut7mo0gswk.png"
+                    style={{ width: 200, height: 118 }}
+                  />
+                </div>
+                <Button title="Amazon" />
+              </div>
+            </div>
+          </div>
+          <div>{select === 1 && <Steam categories={store.categories} />}</div>
+          <div>{select === 2 && <Google categories={store.categories} />}</div>

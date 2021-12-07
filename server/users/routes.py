@@ -18,7 +18,7 @@ def register():
     lastname = request.json['lastname']
     password = request.json['password']
     hashed_pw = bcrypt.generate_password_hash(password).decode('utf-8')
-    user = User(email=email, firstname=firstname, lastname=lastname, password=hashed_pw)
+    user = User(email=email.lower(), firstname=firstname, lastname=lastname, password=hashed_pw)
     db.session.add(user)
     db.session.commit()
     send_email(user)
@@ -63,7 +63,7 @@ def verify_email(token):
 @users.route("/resetPassword", methods=['POST'])
 def password_reset_token():
     email = request.json['email']
-    user = User.query.filter_by(email=email).first()
+    user = User.query.filter_by(email=email.lower()).first()
     if user:
         send_reset_email(user)
         return jsonify({'msg': "Instructions to reset your password has been sent to your email."}), 200

@@ -13,7 +13,7 @@ admin = Blueprint("admin", __name__)
 def login():
     email = request.json['email']
     password = request.json['password']
-    user = User.query.filter_by(email=email).first()
+    user = User.query.filter_by(email=email.lower()).first()
     if user and user.admin and bcrypt.check_password_hash(user.password, password):
         access_token = create_access_token(identity=user.email)
         refresh_token = create_refresh_token(identity=user.email)
@@ -73,12 +73,11 @@ def edit_card(id):
         return {"error": "You're not authorized to visit this page."}, 401
     user = User.query.filter_by(email=email).first()
     action = request.json['action']
-    # amount_to_add = request.json['amount']
     if user and user.admin:
         card = Card.query.get(id)
         customer = User.query.get(card.user_id)
         if action == "Approved":
-            customer.balance += card.amount*card.at_rate
+            customer.balance += card.amount * card.at_rate
             card.status = "Approved"
             db.session.commit()
             # Send Approval Email to Customer

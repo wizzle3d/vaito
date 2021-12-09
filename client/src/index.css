@@ -183,7 +183,7 @@ header #branding {
 
 .content-section-border {
   width: 40%;
-  margin: auto;
+  margin-top: 30px;
   padding: 2%;
   background: #ffffff;
   border: #e7e7e7 2px solid;
@@ -276,68 +276,17 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-  header {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .content-section-border,
-  .content-section,
-  .dashboard,
-  .col,
-  .tab,
-  .column {
-    flex: 100%;
-    width: 100%;
-    margin-top: 0;
-  }
-  .cs-class {
-    width: 95%;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .scroll {
-    overflow: scroll;
-  }
-
-  .cs-3 {
-    width: 100%;
-    flex: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  #showcase {
-    min-height: 400px;
-    background-position-x: -635px;
-    background-position-y: -160px;
-    background-size: 300%;
-  }
-  #showcase h1 {
-    margin: 0%;
-    font-size: 30px;
-  }
-  #showcase p {
-    font-size: 20px;
-  }
-  .review-box {
-    width: 100%;
-    float: none;
-    margin: 15px 0;
-  }
-  .cs-class-2,
-  .modal-content,
-  .btn {
-    width: 100%;
-  }
-  .card-section {
-    width: 90%;
-    margin-top: 0;
-  }
 }
 
 @media screen and (max-width: 1000px) {
   .box {
     flex: 40%;
     margin-top: 0;
+  }
+  .content-section-border {
+    flex: 100%;
+    width: 60%;
+    margin-top: 30px;
   }
   @media screen and (max-width: 600px) {
     .box {
@@ -347,6 +296,62 @@ footer {
     .box p {
       margin: auto;
       padding: 0;
+    }
+    header {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .content-section-border,
+    .content-section,
+    .dashboard,
+    .col,
+    .tab,
+    .column {
+      flex: 100%;
+      width: 100%;
+      margin-top: 0;
+    }
+    .cs-class {
+      width: 95%;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .scroll {
+      overflow: scroll;
+    }
+
+    .cs-3 {
+      width: 100%;
+      flex: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    #showcase {
+      min-height: 400px;
+      background-position-x: -635px;
+      background-position-y: -160px;
+      background-size: 300%;
+    }
+    #showcase h1 {
+      margin: 0%;
+      font-size: 30px;
+    }
+    #showcase p {
+      font-size: 20px;
+    }
+    .review-box {
+      width: 100%;
+      float: none;
+      margin: 15px 0;
+    }
+    .cs-class-2,
+    .modal-content,
+    .btn {
+      width: 100%;
+    }
+    .card-section {
+      width: 90%;
+      margin-top: 0;
     }
   }
 }

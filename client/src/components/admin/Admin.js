@@ -154,7 +154,7 @@ const Admin = () => {
             </div>
           </div>
           <div className="cs-class cs-3">
-            <p className="content-section-border mb-2">
+            <p className="container content-section-border mb-4">
               <strong>Admin: </strong>
               {admin.firstname} {admin.lastname} ({admin.email})
             </p>
@@ -197,7 +197,7 @@ const Admin = () => {
                         <th scope="row text-align">Image</th>
                         <th scope="col">ID</th>
                         <th scope="col">Issuer</th>
-                        <th scope="col">Type</th>
+                        <th scope="col">Amount</th>
                         <th scope="col">Currency</th>
                         <th scope="col">@Rate</th>
                         <th scope="col">Status</th>

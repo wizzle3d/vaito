@@ -15,7 +15,6 @@ const PasswordRequestForm = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
-
     const data = await res.json();
     if (res.status === 200) {
       setDisplay(1);
@@ -40,14 +39,14 @@ const PasswordRequestForm = () => {
             <legend className="border-bottom mb-4">
               Request Password Reset
             </legend>
-            <div className="form-group">
+            <div className="form-group mb-2">
               <label>Email</label>
               <input
                 type="text"
                 {...register("email")}
                 name="email"
                 placeholder="Enter Email"
-                className="form-control form-control-lg"
+                className="form-control"
               />
               <div className="form-ctrl">
                 {errors?.email && (
@@ -61,6 +60,7 @@ const PasswordRequestForm = () => {
               type="submit"
               className="btn btn-primary mb-3"
               value="Reset Password"
+              style={{ backgroundColor: "#3333c4" }}
             />
             <div className="container">
               <p className="border-top mb-4 text-align">
@@ -71,7 +71,9 @@ const PasswordRequestForm = () => {
         )}
         {display === 1 && (
           <div className="container content-section-border">
-            <p className="alert alert-info">{serverRes.msg}</p>
+            <p className="alert alert-info" style={{ minHeight: 65 }}>
+              {serverRes.msg}
+            </p>
             <div className="container">
               <p className="border-top mb-4 text-align">
                 Don't have an account? <Link to="/register">Sign Up</Link>

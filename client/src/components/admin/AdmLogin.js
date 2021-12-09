@@ -8,6 +8,7 @@ import { useEffect } from "react";
 
 const AdmLogin = () => {
   const [display, setDisplay] = useState(0);
+  const [serverRes, setServerRes] = useState({});
   const { store, dispatch } = useContext(Store);
   let navigate = useNavigate();
   useEffect(() => {
@@ -18,7 +19,6 @@ const AdmLogin = () => {
     }
     display === 2 && navigate("/admin/dashboard");
   }, [store.loggedIn, display, navigate]);
-  const [serverRes, setServerRes] = useState({});
 
   //submit to server fuction for when form validates on submit
   const contactServer = async (formData) => {
@@ -62,7 +62,8 @@ const AdmLogin = () => {
                   {...register("email")}
                   name="email"
                   placeholder="Email"
-                  className="form-control form-control-lg"
+                  className="form-control"
+                  onChange={() => setServerRes({})}
                 />
                 {errors?.email && (
                   <p className="alert alert-warning form-ctrl-input">
@@ -71,22 +72,28 @@ const AdmLogin = () => {
                 )}
                 {}
               </div>
-              <div className="form-group mb-4">
+              <div className="form-group mb-2">
                 <label>Password</label>
                 <input
                   type="password"
                   name="password"
                   {...register("password")}
                   placeholder="Password"
-                  className="form-control form-control-lg"
+                  className="form-control"
+                  onChange={() => setServerRes({})}
                 />
               </div>
               <div className="form-ctrl">
                 {serverRes.error && (
-                  <span className="alert alert-danger">{serverRes.error}</span>
+                  <p className="alert alert-danger">{serverRes.error}</p>
                 )}
               </div>
-              <input type="submit" className="btn btn-primary" value="Login" />
+              <input
+                type="submit"
+                className="btn btn-primary"
+                value="Login"
+                style={{ backgroundColor: "#3333c4" }}
+              />
             </div>
           </form>
         </div>

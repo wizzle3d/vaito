@@ -11,7 +11,7 @@ const Cards = ({ card, onClick }) => {
       </th>
       <td>{card.id}</td>
       <td>{card.category.issuer}</td>
-      <td>{card.category.card_type}</td>
+      <td>{card.amount}</td>
       <td>{card.category.currency}</td>
       <td>{card.at_rate}</td>
       <td>{card.status}</td>

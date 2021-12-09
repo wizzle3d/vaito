@@ -42,7 +42,7 @@ const Register = () => {
         <div style={{ marginTop: 20 }}>
           <form onSubmit={handleSubmit(contactServer)}>
             {formStep === 0 && (
-              <div className="content-section-border">
+              <div className="container content-section-border">
                 <legend className="border-bottom mb-4">Register</legend>
                 <div className="form-group mb-4">
                   <label>Email</label>

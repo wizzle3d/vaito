@@ -70,14 +70,14 @@ const ResetPassword = () => {
           {display === 1 && (
             <div>
               <legend className="border-bottom mb-4">Reset Password.</legend>
-              <div className="form-group">
+              <div className="form-group mb-4">
                 <label>Password</label>
                 <input
                   type="password"
                   {...register("password")}
                   name="password"
                   placeholder="Password"
-                  className="form-control form-control-lg"
+                  className="form-control"
                 />
                 {errors?.password && (
                   <p className="alert alert-warning form-ctrl input">
@@ -85,14 +85,14 @@ const ResetPassword = () => {
                   </p>
                 )}
               </div>
-              <div className="form-group">
+              <div className="form-group mb-2">
                 <label>Confirm Password</label>
                 <input
                   type="password"
                   {...register("confirmPassword")}
                   name="confirmPassword"
                   placeholder="confirmPassword"
-                  className="form-control form-control-lg"
+                  className="form-control"
                 />
                 {errors?.confirmPassword && (
                   <p className="alert alert-warning form-ctrl input">
@@ -104,6 +104,7 @@ const ResetPassword = () => {
                 type="submit"
                 className="btn btn-primary mb-3"
                 value="Reset Password"
+                style={{ backgroundColor: "#3333c4" }}
               />
               <div className="container">
                 <p className="border-top mb-4 text-align">

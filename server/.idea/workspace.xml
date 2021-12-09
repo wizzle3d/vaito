@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fbcf32-f250-40bd-b899-fe07dc797aa4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../client/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/PasswordRequestForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/PasswordRequestForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/admin/AdmLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/admin/AdmLogin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/admin/Admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/admin/Admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/components/admin/Cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/components/admin/Cards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
